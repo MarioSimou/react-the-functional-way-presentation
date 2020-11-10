@@ -1,0 +1,46 @@
+{
+  "name": "react-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --config webpack.config.js",
+    "start:snippets:jsx": "npm start -- --entry ./src/snippets/components-with-jsx.jsx",
+    "start:snippets:plain": "npm start -- --entry ./src/snippets/components-with-plain-syntax.jsx",
+    "start:snippets:classes": "npm start -- --entry ./src/snippets/class-based-components.jsx",
+    "start:snippets:functional": "npm start -- --entry ./src/snippets/functional-components.jsx",
+    "start:snippets:props": "npm start -- --entry ./src/snippets/communication-between-components.jsx",
+    "start:snippets:componentProps": "npm start -- --entry ./src/snippets/passing-components-as-properties.jsx",
+    "start:snippets:closure": "npm start -- --entry ./src/snippets/counter-with-closure.jsx",
+    "start:ecommerce:classes": "npm start -- --entry ./src/ecommerce/classes/index.jsx",
+    "start:ecommerce:classes:unit": "NODE_ENV=test mocha --require @babel/register --require test.config.js --recursive ./src/ecommerce/classes/**/*.spec.js",
+    "start:ecommerce:functional": "npm start -- --entry ./src/ecommerce/classes/index.jsx",
+    "start:ecommerce:functional:unit": "NODE_ENV=test mocha --require @babel/register --require test.config.js --recursive ./src/ecommerce/functional/**/*.spec.js"
+  },
+  "keywords": [],
+  "author": "Marios Simou",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.5",
+    "@babel/register": "^7.12.1",
+    "babel-loader": "^8.1.0",
+    "chai": "^4.2.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "html-webpack-plugin": "^4.5.0",
+    "mocha": "^8.2.1",
+    "regenerator-runtime": "^0.13.7",
+    "sinon": "^9.2.1",
+    "sinon-chai": "^3.5.0",
+    "sinon-test": "^3.0.0",
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
