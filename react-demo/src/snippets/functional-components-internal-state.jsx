@@ -1,11 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-const mapFunctionToProps = mapFn => Component => props  => <Component {...mapFn(props)} />
-
-
-const App = ({initialCounter}) => {
-    const [counter, setCounter] = React.useState(initialCounter)
+const App = () => {
+    const [counter, setCounter] = React.useState(0)
 
     return (
         <div>
@@ -19,11 +16,4 @@ const App = ({initialCounter}) => {
     )
 }
 
-const preloadPropsFn = props => ({
-    initialCounter: 0,
-    ...props
-})
-
-const AppContainer = mapFunctionToProps(preloadPropsFn)(App)
-
-ReactDOM.render(<AppContainer/>, document.getElementById('root'))
+ReactDOM.render(<App/>, document.getElementById('root'))

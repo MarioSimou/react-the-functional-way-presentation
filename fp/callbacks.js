@@ -1,6 +1,6 @@
 const processData = (e,data) => {
     if(e){
-        console.log('Error: ', e.message)
+        return console.log('Error: ', e.message)
     }
 
     console.log('Processing data: ', data)

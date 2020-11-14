@@ -9,5 +9,5 @@ counter() // 2
 counter() // 3
 
 const newCounter = getCounter()
-counter() // 1
-counter() // 2
+newCounter() // 1
+newCounter() // 2
